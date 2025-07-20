@@ -1,172 +1,70 @@
-  
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="_jVgeWmbXYml5snJJqJCIi2NSy4ypYK03bAiFvNcPXA" />
-  <title>REDIGTAR - Dokumentasi Digital Taruna</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #1a1a1a, #333);
-      color: #fff;
-    }
-    nav {
-      background-color: #000;
-    }
-    nav .nav-link {
-      color: #fff;
-      font-weight: 600;
-      margin: 0 10px;
-      border: 2px solid #ffc107;
-      border-radius: 20px;
-      padding: 6px 12px;
-      transition: 0.3s;
-    }
-    nav .nav-link:hover {
-      background-color: #ffc107;
-      color: #000;
-    }
-    header {
-      text-align: center;
-      padding: 80px 20px;
-    }
-    header h1 {
-      font-size: 3rem;
-      color: #ffc107;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin: 20px 0;
-    }
-    .btn-primary {
-      background-color: #ffc107;
-      border: none;
-      color: #000;
-      font-weight: bold;
-      border-radius: 8px;
-    }
-    section {
-      padding: 60px 20px;
-    }
-    footer {
-      background-color: #111;
-      padding: 30px;
-      text-align: center;
-      color: #aaa;
-    }
-    .carousel-item img {
-      height: 200px;
-      object-fit: contain;
-    }
-  </style>
-</head>
-<body>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #012840, #044F6D); /* Laut dan langit laut */
+    color: #fff;
+  }
 
-  <nav class="navbar navbar-expand-lg navbar-dark px-3">
-    <a class="navbar-brand" href="#">
-      <img src="logo.png" alt="Logo REDIGTAR" height="80">
-    </a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
-        <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
-        <li class="nav-item"><a class="nav-link" href="#daftar">Pendaftaran</a></li>
-        <li class="nav-item"><a class="nav-link" href="#sosmed">Sosial Media</a></li>
-      </ul>
-    </div>
-  </nav>
+  nav {
+    background-color: #011F3F; /* Navy dark */
+  }
 
-  <header>
-    <h1>REDIGTAR</h1>
-    <p>Record Digital Taruna – Ekskul dokumentasi kegiatan ketarunaan SMK Negeri 1 Puring.</p>
-    <a href="#daftar" class="btn btn-primary">Daftar Sekarang</a>
-  </header>
+  nav .nav-link {
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0 10px;
+    border: 2px solid #FFD700; /* Emas */
+    border-radius: 20px;
+    padding: 6px 12px;
+    transition: 0.3s;
+  }
 
-  <section id="tentang">
-    <div class="container">
-      <h2 class="text-warning">Tentang Kami</h2>
-      <p>REDIGTAR (Record Digital Taruna) adalah ekstrakurikuler yang bergerak di bidang dokumentasi digital di SMK Negeri 1 Purung. Kami bertugas merekam, mengabadikan, dan menyebarluaskan setiap kegiatan sekolah, khususnya yang berkaitan dengan dunia ketarunaan.
+  nav .nav-link:hover {
+    background-color: #FFD700;
+    color: #011F3F;
+  }
 
-Dengan slogan “Merekam Cerita, Berkarya Bersama,” REDIGTAR hadir sebagai tim dokumentasi yang mengedepankan semangat kolaborasi dan kreativitas. Kami percaya bahwa setiap momen penting layak untuk diceritakan dan dikenang.
+  header {
+    text-align: center;
+    padding: 80px 20px;
+  }
 
-REDIGTAR terdiri dari beberapa divisi, yaitu:
-📸 Fotografer
-🎥 Videografer
-🖥️ Editor
-🎨 Desainer Visual
-🚁 Pilot Drone
+  header h1 {
+    font-size: 3rem;
+    color: #FFD700; /* Judul pakai emas */
+  }
 
-Setiap divisi bekerja sama untuk menghasilkan konten yang informatif, menarik, dan berkualitas tinggi.
+  header p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #D0EFFF; /* Biru langit muda */
+  }
 
-Tujuan kami adalah menjadi tim dokumentasi yang profesional, kreatif, dan disiplin. Melalui kamera dan karya digital, REDIGTAR menjadi penyambung cerita bagi seluruh warga sekolah.
+  .btn-primary {
+    background-color: #FFD700;
+    border: none;
+    color: #011F3F;
+    font-weight: bold;
+    border-radius: 8px;
+  }
 
-Bersama REDIGTAR, kita tidak hanya mendokumentasikan peristiwa, tetapi juga ikut menjadi bagian dari sejarah SMK Negeri 1 Purung.:</p>
-      <div id="divisiCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
-        <div class="carousel-inner text-center">
-          <div class="carousel-item active"><img src="divisi/editor.jpg" class="d-block mx-auto" alt="Editor" width="100"><h5 class="mt-2 text-warning">Editor</h5></div>
-          <div class="carousel-item"><img src="divisi/fotografer.jpg" class="d-block mx-auto" alt="Fotografer" width="100"><h5 class="mt-2 text-warning">Fotografer</h5></div>
-          <div class="carousel-item"><img src="divisi/videografer.jpg" class="d-block mx-auto" alt="Videografer" width="100"><h5 class="mt-2 text-warning">Videografer</h5></div>
-          <div class="carousel-item"><img src="divisi/desainer.jpg" class="d-block mx-auto" alt="Desainer Visual" width="100"><h5 class="mt-2 text-warning">Desainer Visual</h5></div>
-          <div class="carousel-item"><img src="divisi/drone.jpg" class="d-block mx-auto" alt="Pilot Drone" width="100"><h5 class="mt-2 text-warning">Pilot Drone</h5></div>
-          <div class="carousel-item"><img src="divisi/konten.jpg" class="d-block mx-auto" alt="Konten Kreator" width="100"><h5 class="mt-2 text-warning">Konten Kreator</h5></div>
-          <div class="carousel-item"><img src="divisi/jurnalistik.jpg" class="d-block mx-auto" alt="Jurnalistik" width="100"><h5 class="mt-2 text-warning">Jurnalistik</h5></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  section {
+    padding: 60px 20px;
+  }
 
-  <section id="galeri">
-    <div class="container">
-      <h2 class="text-warning">Galeri Kegiatan</h2>
-      <ul>
-        <li><a href="https://drive.google.com/drive/folders/LINK_FOLDER_1" target="_blank" class="btn btn-warning my-2">Galeri 1</a></li>
-        <li><a href="https://drive.google.com/drive/folders/LINK_FOLDER_2" target="_blank" class="btn btn-warning my-2">Galeri 2</a></li>
-        <li><a href="https://drive.google.com/drive/folders/LINK_FOLDER_3" target="_blank" class="btn btn-warning my-2">Galeri 3</a></li>
-        <!-- Tambah lebih banyak sesuai kebutuhan -->
-      </ul>
-    </div>
-  </section>
+  footer {
+    background-color: #001B30;
+    padding: 30px;
+    text-align: center;
+    color: #cccccc;
+  }
 
-  <section id="daftar">
-    <div class="container">
-      <h2 class="text-warning">Pendaftaran Anggota Baru</h2>
-      <form action="https://script.google.com/macros/s/AKfycbyUEkhAT7tQciMgZg1f9HY23lCACIexxCChTKAkfZdBK8vXalDFlvwj45A7mr4eG6A2/exec" method="POST">
-        <input type="text" name="nama" placeholder="Nama Lengkap" required class="form-control my-2">
-        <input type="text" name="kelas" placeholder="Kelas" required class="form-control my-2">
-        <select name="divisi" required class="form-control my-2">
-          <option value="">-- Pilih Divisi --</option>
-          <option>Editor</option>
-          <option>Fotografer</option>
-          <option>Videografer</option>
-          <option>Desainer Visual</option>
-          <option>Pilot Drone</option>
-          <option>Konten Kreator</option>
-          <option>Jurnalistik</option>
-        </select>
-        <textarea name="alasan" placeholder="Alasan Bergabung" required class="form-control my-2"></textarea>
-        <button type="submit" class="btn btn-primary">Kirim</button>
-      </form>
-    </div>
-  </section>
+  .carousel-item img {
+    height: 200px;
+    object-fit: contain;
+  }
 
-  <section id="sosmed">
-    <div class="container text-center">
-      <h2 class="text-warning">Sosial Media</h2>
-      <a href="https://instagram.com/akunmu" target="_blank"><img src="instagram.png" width="70"></a>
-      <a href="https://tiktok.com/@akunmu" target="_blank"><img src="tiktok.png" width="50" class="mx-2"></a>
-      <a href="https://youtube.com/@akunmu" target="_blank"><img src="youtube.png" width="48" class="mx-2"></a>
-      <a href="https://facebook.com/akunmu" target="_blank"><img src="facebook.png" width="40"></a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 REDIGTAR. All rights reserved.</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  h2.text-warning {
+    color: #00C0F0 !important; /* Judul section jadi biru terang */
+  }
+</style>
