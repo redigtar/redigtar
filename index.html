@@ -3,138 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>REDIGTAR - Record Digital Taruna</title>
+  <title>REDIGTAR - Ekskul Dokumentasi SMK Pelayaran</title>
   <style>
     body {
       font-family: sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f8fb;
+      background: #f0f4fa;
       color: #222;
     }
 
     header {
       text-align: center;
-      background: #003366;
+      padding: 2rem 1rem;
+      background: #004e92;
       color: white;
-      padding: 2em 1em;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5em;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
 
     header p {
-      font-size: 1.2em;
-      margin: 0.5em 0 1.5em;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
     }
 
-    .instagram-embed {
-      display: flex;
-      justify-content: center;
-      margin: 1em 0;
-    }
-
-    .instagram-embed iframe {
-      width: 320px;
-      height: 600px;
+    header iframe {
+      width: 100%;
+      max-width: 400px;
+      height: 500px;
       border: none;
-      overflow: hidden;
-      max-width: 90%;
+      margin-bottom: 1rem;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 1.5em;
-      padding: 0.75em 1.5em;
-      background: #ffffff;
-      color: #003366;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
+      background: #00b4d8;
+      color: white;
+      padding: 0.75rem 1.5rem;
       text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #cce0ff;
+      border-radius: 8px;
     }
 
     section {
-      padding: 2em 1em;
-      max-width: 1000px;
-      margin: 0 auto;
+      padding: 2rem 1rem;
     }
 
-    .divisi-grid {
+    .divisi-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1.5em;
-      margin-top: 1em;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
     }
 
-    .divisi-item {
-      background: white;
-      border-radius: 12px;
-      padding: 1em;
+    .divisi {
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .divisi-item img {
+    .divisi img {
       width: 100%;
-      max-height: 150px;
+      border-radius: 10px;
+      height: 180px;
       object-fit: cover;
-      border-radius: 8px;
+      margin-bottom: 0.5rem;
     }
 
     footer {
-      background: #003366;
+      background: #003566;
       color: white;
       text-align: center;
-      padding: 1em;
+      padding: 1rem;
+      margin-top: 2rem;
     }
 
-    footer a {
-      color: #aad;
+    .sosmed a {
+      color: white;
       text-decoration: none;
+      font-weight: bold;
     }
+
   </style>
 </head>
 <body>
 
   <header>
     <h1>REDIGTAR</h1>
-    <p>Record Digital Taruna – Ekskul dokumentasi kegiatan ketarunaan SMK Negeri 1 Puring</p>
-    
-    <div class="instagram-embed">
-      <iframe src="https://www.instagram.com/reel/DL1pXKpyR_x/?igsh=MW5vM3hzNnJyN2w5dw==></iframe>
-    </div>
+    <p>Record Digital Taruna – Ekskul dokumentasi kegiatan ketarunaan SMK Negeri 1 Puring.</p>
 
+    <!-- Ganti LINK_IG_VIDEO_KAMU dengan link video Instagram kamu -->
+    <iframe 
+      src="https://www.instagram.com/reel/DL1pXKpyR_x/?igsh=MW5vM3hzNnJyN2w5dw==" 
+      allowtransparency="true" 
+      allowfullscreen 
+      scrolling="no">
+    </iframe>
+
+    <br />
     <a href="#daftar" class="btn">Daftar Sekarang</a>
   </header>
 
   <section id="divisi">
     <h2>Divisi REDIGTAR</h2>
-    <div class="divisi-grid">
-      <div class="divisi-item">
+    <div class="divisi-container">
+      <div class="divisi">
         <img src="divisi/editor.jpg" alt="Editor">
         <h3>Editor</h3>
       </div>
-      <div class="divisi-item">
+      <div class="divisi">
         <img src="divisi/fotografer.jpg" alt="Fotografer">
         <h3>Fotografer</h3>
       </div>
-      <div class="divisi-item">
+      <div class="divisi">
         <img src="divisi/videografer.jpg" alt="Videografer">
         <h3>Videografer</h3>
       </div>
-      <div class="divisi-item">
+      <div class="divisi">
         <img src="divisi/desainer.jpg" alt="Desainer Visual">
         <h3>Desainer Visual</h3>
       </div>
-      <div class="divisi-item">
+      <div class="divisi">
         <img src="divisi/drone.jpg" alt="Pilot Drone">
         <h3>Pilot Drone</h3>
       </div>
@@ -144,13 +136,30 @@
   <section id="daftar">
     <h2>Formulir Pendaftaran</h2>
     <p>Silakan isi formulir berikut untuk bergabung bersama kami!</p>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSXXXXXXXXXXXXXXXXX/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+    <form>
+      <label for="nama">Nama Lengkap:</label><br>
+      <input type="text" id="nama" name="nama" required><br><br>
+      <label for="kelas">Kelas:</label><br>
+      <input type="text" id="kelas" name="kelas" required><br><br>
+      <label for="divisi">Pilih Divisi:</label><br>
+      <select id="divisi" name="divisi">
+        <option value="editor">Editor</option>
+        <option value="fotografer">Fotografer</option>
+        <option value="videografer">Videografer</option>
+        <option value="desainer">Desainer Visual</option>
+        <option value="drone">Pilot Drone</option>
+      </select><br><br>
+      <button type="submit" class="btn">Kirim</button>
+    </form>
   </section>
 
   <footer>
-    <p>Ikuti kami di 
-      <a href="https://www.instagram.com/redigtar?igsh=MXZteDlmOWtzZ214aw== ">@redigtar</a>
+    <p>Ikuti kami di Instagram: 
+      <span class="sosmed">
+        <a href="https://www.instagram.com/redigtar?igsh=MXZteDlmOWtzZ214aw==" target="_blank">@redigtar</a>
+      </span>
     </p>
+    <p>&copy; 2025 REDIGTAR - SMK Negeri 1 Puring</p>
   </footer>
 
 </body>
