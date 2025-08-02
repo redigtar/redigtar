@@ -21,11 +21,11 @@
             background: #0b5ed7;
         }
 
-        /* Animasi Slide In (menggunakan class dari Tailwind) */
+        /* Animasi Slide In */
         .slide-in-container {
             position: relative;
             overflow: hidden;
-            height: 350px; /* Sesuaikan tinggi container slide */
+            height: 400px; /* Tinggi disesuaikan untuk gambar */
         }
         .slide-item {
             position: absolute;
@@ -37,9 +37,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
             transform: translateY(100%);
             transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
             opacity: 0;
+            padding: 1.5rem;
         }
         .slide-item.active {
             transform: translateY(0);
@@ -51,12 +53,12 @@
 
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md p-4 flex justify-between items-center">
         <div class="flex items-center">
-            <img src="https://via.placeholder.com/40x40.png?text=Logo" scr="Logo.png" class="h-8 mr-2">
+            <img src="logo.png" alt="Logo REDIGTAR" class="h-8 mr-2">
             <h1 class="text-xl font-bold text-blue-700">REDIGTAR</h1>
         </div>
     </nav>
 
-    <header class="h-screen flex items-center justify-center text-center bg-gradient-to-br from-blue-900 to-blue-600 text-white p-6 pt-20" style="background-image: url('https://images.unsplash.com/photo-1542382902-8a9d18e54737?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center; background-blend-mode: multiply;">
+    <header class="h-screen flex items-center justify-center text-center bg-gradient-to-br from-blue-900 to-blue-600 text-white p-6 pt-20" style="background-image: url('beground.png'); background-size: cover; background-position: center; background-blend-mode: multiply;">
         <div>
             <h2 class="text-4xl sm:text-5xl font-bold mb-4 animate-fade-in-down">REDIGTAR</h2>
             <p class="text-lg sm:text-xl font-light max-w-xl mx-auto animate-fade-in-up">
@@ -97,30 +99,35 @@
             <h3 class="text-3xl font-bold text-blue-700 mb-8">Divisi Kami</h3>
             <div class="slide-in-container rounded-lg shadow-lg bg-white p-6 relative">
                 <div class="slide-item active" data-divisi="editor">
+                    <img src="editor.JPG" alt="Divisi Editor" class="w-24 h-24 rounded-full mb-4 object-cover mx-auto">
                     <h4 class="text-2xl font-bold text-blue-600 mb-2">Editor</h4>
                     <p class="text-md text-gray-600 max-w-2xl mx-auto">
                         Mewujudkan cerita dari rekaman mentah. Divisi ini bertanggung jawab untuk merangkai video, menyelaraskan audio, dan memastikan setiap hasil akhir terlihat profesional dan berkesan.
                     </p>
                 </div>
                 <div class="slide-item" data-divisi="fotografer">
+                    <img src="fotografer.JPG" alt="Divisi Fotografer" class="w-24 h-24 rounded-full mb-4 object-cover mx-auto">
                     <h4 class="text-2xl font-bold text-blue-600 mb-2">Fotografer</h4>
                     <p class="text-md text-gray-600 max-w-2xl mx-auto">
                         Mengabadikan momen berharga dalam bingkai foto. Divisi ini fokus pada komposisi, pencahayaan, dan teknik fotografi untuk menghasilkan gambar yang kuat dan bermakna.
                     </p>
                 </div>
                 <div class="slide-item" data-divisi="videografer">
+                    <img src="videografer.JPG" alt="Divisi Videografer" class="w-24 h-24 rounded-full mb-4 object-cover mx-auto">
                     <h4 class="text-2xl font-bold text-blue-600 mb-2">Videografer</h4>
                     <p class="text-md text-gray-600 max-w-2xl mx-auto">
                         Merekam cerita dalam gerak. Bertanggung jawab atas pengambilan gambar video, termasuk sudut pandang, pergerakan kamera, dan teknik sinematografi.
                     </p>
                 </div>
-                <div class="slide-item" data-divisi="visual">
-                    <h4 class="text-2xl font-bold text-blue-600 mb-2">Desainer Visual</h4>
+                <div class="slide-item" data-divisi="desain-fisual">
+                    <img src="desainer.JPG" alt="Divisi Desain Fisual" class="w-24 h-24 rounded-full mb-4 object-cover mx-auto">
+                    <h4 class="text-2xl font-bold text-blue-600 mb-2">Disain Fisual</h4>
                     <p class="text-md text-gray-600 max-w-2xl mx-auto">
                         Menciptakan identitas visual REDIGTAR. Divisi ini membuat desain grafis, poster, dan elemen visual lainnya untuk mendukung konten digital kami.
                     </p>
                 </div>
                 <div class="slide-item" data-divisi="drone">
+                    <img src="drone.JPG" alt="Divisi Pilot Drone" class="w-24 h-24 rounded-full mb-4 object-cover mx-auto">
                     <h4 class="text-2xl font-bold text-blue-600 mb-2">Pilot Drone</h4>
                     <p class="text-md text-gray-600 max-w-2xl mx-auto">
                         Merekam dari perspektif yang tak biasa. Divisi ini mengoperasikan drone untuk mengambil gambar dan video dari udara, memberikan sudut pandang unik dan spektakuler.
@@ -163,7 +170,7 @@
                             <option value="editor">Editor</option>
                             <option value="fotografer">Fotografer</option>
                             <option value="videografer">Videografer</option>
-                            <option value="visual">Desainer Visual</option>
+                            <option value="disain-fisual">Disain Fisual</option>
                             <option value="drone">Pilot Drone</option>
                         </select>
                     </div>
