@@ -2,76 +2,155 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formulir Pendaftaran REDIGTAR</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REDIGTAR | Rekam Jejak Taruna</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    header {
+      background-color: rgba(0, 0, 128, 0.7);
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+    }
+    .divisi {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 1rem;
+    }
+    .divisi-card {
+      min-width: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .divisi-card:hover {
+      transform: scale(1.05);
+    }
+    form {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background-color: navy;
+      color: white;
+      padding: 0.7rem 2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: rgba(0, 0, 128, 0.7);
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <div class="min-h-screen flex items-center justify-center">
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
-      <h1 class="text-3xl font-bold mb-6 text-center text-blue-600">Formulir Pendaftaran REDIGTAR</h1>
-      <form id="pendaftaran-form">
-        <div class="mb-4">
-          <label for="nama" class="block text-gray-700 font-bold mb-2">Nama Lengkap</label>
-          <input type="text" id="nama" name="nama" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div class="mb-4">
-          <label for="kelas" class="block text-gray-700 font-bold mb-2">Kelas</label>
-          <input type="text" id="kelas" name="kelas" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div class="mb-4">
-          <label for="divisi" class="block text-gray-700 font-bold mb-2">Divisi</label>
-          <select id="divisi" name="divisi" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <option value="">Pilih Divisi</option>
-            <option value="Editor">Editor</option>
-            <option value="Fotografer">Fotografer</option>
-            <option value="Videografer">Videografer</option>
-            <option value="Disain Fisual">Disain Fisual</option>
-            <option value="Pilot Drone">Pilot Drone</option>
-          </select>
-        </div>
-        <div class="mb-6">
-          <label for="alasan" class="block text-gray-700 font-bold mb-2">Alasan Bergabung</label>
-          <textarea id="alasan" name="alasan" rows="4" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">Kirim Formulir</button>
-      </form>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo REDIGTAR" />
+    <nav>
+      <a href="#tentang">Tentang Kami</a>
+      <a href="#divisi">Divisi</a>
+      <a href="#daftar">Pendaftaran</a>
+    </nav>
+  </header>
+
+  <section id="tentang">
+    <h2>Tentang Kami</h2>
+    <p>REDIGTAR (Record Digital Taruna) adalah ekstrakurikuler di SMK Negeri 1 Purung yang bertugas mendokumentasikan kegiatan berbasis ketarunaan. Kami memiliki berbagai divisi yang bergerak dalam bidang multimedia dan teknologi digital.</p>
+  </section>
+
+  <section id="divisi">
+    <h2>Divisi Kami</h2>
+    <div class="divisi">
+      <div class="divisi-card">
+        <img src="editor.jpg" alt="Editor" width="100%" />
+        <h3>Editor</h3>
+        <p>Mengedit video dan foto hasil dokumentasi kegiatan.</p>
+      </div>
+      <div class="divisi-card">
+        <img src="fotografer.jpg" alt="Fotografer" width="100%" />
+        <h3>Fotografer</h3>
+        <p>Menangkap momen penting dalam setiap kegiatan sekolah.</p>
+      </div>
+      <div class="divisi-card">
+        <img src="videografer.jpg" alt="Videografer" width="100%" />
+        <h3>Videografer</h3>
+        <p>Membuat dokumentasi video kegiatan secara sinematik.</p>
+      </div>
+      <div class="divisi-card">
+        <img src="visual.jpg" alt="Visual" width="100%" />
+        <h3>Desain Visual</h3>
+        <p>Membuat desain grafis untuk kebutuhan publikasi.</p>
+      </div>
+      <div class="divisi-card">
+        <img src="drone.jpg" alt="Pilot Drone" width="100%" />
+        <h3>Pilot Drone</h3>
+        <p>Mengoperasikan drone untuk dokumentasi dari udara.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <script>
-    document.getElementById('pendaftaran-form').addEventListener('submit', async function(e) {
-      e.preventDefault();
+  <section id="daftar">
+    <h2>Formulir Pendaftaran</h2>
+    <p>Silakan isi formulir berikut untuk mendaftar menjadi anggota REDIGTAR.</p>
+    <form action="https://docs.google.com/forms/d/e/FORM_ID/formResponse" method="POST" target="_blank">
+      <label>Nama Lengkap:</label>
+      <input type="text" name="entry.1234567890" required />
 
-      const data = {
-        nama: document.getElementById('nama').value,
-        kelas: document.getElementById('kelas').value,
-        divisi: document.getElementById('divisi').value,
-        alasan: document.getElementById('alasan').value
-      };
+      <label>Kelas:</label>
+      <input type="text" name="entry.0987654321" required />
 
-      const webhookURL = "https://script.google.com/macros/s/AKfycbxxxxxxxxxxxxxxxxxxxxx/exec"; // GANTI dengan URL kamu
+      <label>Pilih Divisi:</label>
+      <select name="entry.1112131415" required>
+        <option value="Editor">Editor</option>
+        <option value="Fotografer">Fotografer</option>
+        <option value="Videografer">Videografer</option>
+        <option value="Desain Visual">Desain Visual</option>
+        <option value="Pilot Drone">Pilot Drone</option>
+      </select>
 
-      try {
-        const response = await fetch(webhookURL, {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
+      <label>Alasan Bergabung:</label>
+      <textarea name="entry.1617181920" rows="4" required></textarea>
 
-        if (response.ok) {
-          alert("Formulir berhasil dikirim!");
-          document.getElementById('pendaftaran-form').reset();
-        } else {
-          alert("Terjadi kesalahan saat mengirim. Coba lagi nanti.");
-        }
-      } catch (error) {
-        alert("Gagal terhubung ke server. Coba lagi.");
-        console.error(error);
-      }
-    });
-  </script>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 REDIGTAR - SMK Negeri 1 Purung
+  </footer>
+
 </body>
 </html>
