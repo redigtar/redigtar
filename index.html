@@ -1,242 +1,225 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REDIGTAR - Record Digital Taruna</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REDIGTAR - Record Digital Taruna</title>
 
-        <meta name="google-site-verification" content="_jVgeWmbXYml5snJJqJCIi2NSy4ypYK03bAiFvNcPXA" />
+  <meta name="google-site-verification" content="_jVgeWmbXYml5snJJqJCIi2NSy4ypYK03bAiFvNcPXA" />
 
-    <!-- SEO -->
-    <meta name="description" content="Website resmi REDIGTAR (Record Digital Taruna) SMK Negeri 1 Puring. Dokumentasi kreatif kegiatan ketarunaan.">
-    <meta name="keywords" content="REDIGTAR, Record Digital Taruna, ekstrakurikuler, dokumentasi, SMK Negeri 1 Puring, fotografer, videografer, pendaftaran anggota, taruna, kreativitas">
+  <!-- SEO -->
+  <meta name="description" content="Website resmi REDIGTAR (Record Digital Taruna) SMK Negeri 1 Puring. Dokumentasi kreatif kegiatan ketarunaan.">
+  <meta name="keywords" content="REDIGTAR, Record Digital Taruna, ekstrakurikuler, dokumentasi, SMK Negeri 1 Puring, fotografer, videografer, pendaftaran anggota, taruna, kreativitas">
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f5f9; }
-        ::-webkit-scrollbar-thumb { background: #0d6efd; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #0b5ed7; }
+  <style>
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #0d6efd; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #0b5ed7; }
 
-        /* Slider Divisi */
-        .slide-in-container {
-            position: relative;
-            overflow: hidden;
-            height: 420px;
-        }
-        .slide-item {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            display: flex; flex-direction: column;
-            justify-content: center; align-items: center;
-            text-align: center;
-            transform: translateY(100%);
-            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-            opacity: 0; padding: 1.5rem;
-        }
-        .slide-item.active {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    </style>
+    .slide-in-container { position: relative; overflow: hidden; height: 420px; }
+    .slide-item {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; transform: translateY(100%); transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      opacity: 0; padding: 1.5rem;
+    }
+    .slide-item.active { transform: translateY(0); opacity: 1; }
+  </style>
 </head>
 <body class="bg-slate-100 font-sans text-gray-800">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md p-4 flex justify-between items-center">
-        <div class="flex items-center">
-            <img src="logo.png" alt="Logo REDIGTAR" class="h-9 mr-2">
-            <h1 class="text-xl font-bold text-blue-700">REDIGTAR</h1>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md p-4 flex justify-between items-center">
+    <div class="flex items-center">
+      <img src="logo.png" alt="Logo REDIGTAR" class="h-9 mr-2">
+      <h1 class="text-xl font-bold text-blue-700">REDIGTAR</h1>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-blue-600 text-white pt-20"
+    style="background-image: url('background.png'); background-size: cover; background-position: center; background-blend-mode: multiply;">
+    <div class="text-center">
+      <h1 class="text-4xl sm:text-6xl font-bold mb-4">Record Digital Taruna</h1>
+      <p class="text-lg sm:text-2xl font-light">Merekam cerita, berkarya bersama.</p>
+    </div>
+  </header>
+
+  <!-- Tentang Kami -->
+  <section id="tentang" class="py-16 px-6 sm:px-12 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-blue-700 mb-4">Tentang Kami</h2>
+      <p class="text-lg text-gray-600 mb-8">
+        REDIGTAR adalah ekstrakurikuler dokumentasi di SMK Negeri 1 Puring. 
+        Kami mengabadikan momen penting, prestasi, dan kegiatan Taruna/i untuk arsip digital sekolah.
+      </p>
+      <div class="grid md:grid-cols-2 gap-8 text-left">
+        <div>
+          <h3 class="text-2xl font-bold text-blue-600 mb-2">Tujuan</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li>Menciptakan dokumentasi visual berkualitas tinggi.</li>
+            <li>Meningkatkan citra sekolah melalui konten digital profesional.</li>
+            <li>Mengembangkan bakat Taruna/i di bidang media digital.</li>
+          </ul>
         </div>
-    </nav>
-
-    <!-- Hero -->
-    <header class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-blue-600 text-white pt-20"
-        style="background-image: url('background.png'); background-size: cover; background-position: center; background-blend-mode: multiply;">
-        <div class="text-center">
-            <h1 class="text-4xl sm:text-6xl font-bold mb-4">Record Digital Taruna</h1>
-            <p class="text-lg sm:text-2xl font-light">Merekam cerita, berkarya bersama.</p>
+        <div>
+          <h3 class="text-2xl font-bold text-blue-600 mb-2">Misi</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li>Mengabadikan momen penting dalam pendidikan.</li>
+            <li>Mengelola arsip digital yang sistematis.</li>
+            <li>Menjadi wadah kreativitas bagi Taruna/i.</li>
+          </ul>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <!-- Tentang Kami -->
-    <section id="tentang" class="py-16 px-6 sm:px-12 bg-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-blue-700 mb-4">Tentang Kami</h2>
-            <p class="text-lg text-gray-600 mb-8">
-                REDIGTAR adalah ekstrakurikuler dokumentasi di SMK Negeri 1 Puring. 
-                Kami mengabadikan momen penting, prestasi, dan kegiatan Taruna/i untuk arsip digital sekolah.
-            </p>
-            <div class="grid md:grid-cols-2 gap-8 text-left">
-                <div>
-                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Tujuan</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Menciptakan dokumentasi visual berkualitas tinggi.</li>
-                        <li>Meningkatkan citra sekolah melalui konten digital profesional.</li>
-                        <li>Mengembangkan bakat Taruna/i di bidang media digital.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Misi</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Mengabadikan momen penting dalam pendidikan.</li>
-                        <li>Mengelola arsip digital yang sistematis.</li>
-                        <li>Menjadi wadah kreativitas bagi Taruna/i.</li>
-                    </ul>
-                </div>
-            </div>
+  <!-- Divisi -->
+  <section id="divisi" class="py-16 px-6 sm:px-12 bg-slate-100">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-blue-700 mb-8">Divisi Kami</h2>
+      <div class="slide-in-container rounded-lg shadow-lg bg-white p-6 relative">
+
+        <!-- Editor -->
+        <div class="slide-item active" data-divisi="editor">
+          <img src="editor.JPG" alt="Divisi Editor REDIGTAR" class="w-28 h-28 rounded-full mb-4 object-cover mx-auto">
+          <h3 class="text-2xl font-bold text-blue-600 mb-2">Editor</h3>
+          <p class="text-md text-gray-600 max-w-2xl mx-auto">
+            Merangkai video, menyelaraskan audio, dan memastikan hasil akhir terlihat profesional.
+          </p>
         </div>
-    </section>
 
-    <!-- Divisi -->
-    <section id="divisi" class="py-16 px-6 sm:px-12 bg-slate-100">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8">Divisi Kami</h2>
-            <div class="slide-in-container rounded-lg shadow-lg bg-white p-6 relative">
-
-                <!-- Editor -->
-                <div class="slide-item active" data-divisi="editor">
-                    <img src="editor.JPG" alt="Divisi Editor REDIGTAR" class="w-28 h-28 rounded-full mb-4 object-cover mx-auto">
-                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Editor</h3>
-                    <p class="text-md text-gray-600 max-w-2xl mx-auto">
-                        Merangkai video, menyelaraskan audio, dan memastikan hasil akhir terlihat profesional.
-                    </p>
-                </div>
-
-                <!-- Fotografer -->
-                <div class="slide-item" data-divisi="fotografer">
-                    <img src="fotografer.JPG" alt="Divisi Fotografer REDIGTAR" class="w-28 h-28 rounded-full mb-4 object-cover mx-auto">
-                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Fotografer</h3>
-                    <p class="text-md text-gray-600 max-w-2xl mx-auto">
-                        Mengabadikan momen berharga dalam bingkai foto dengan teknik fotografi yang kuat.
-                    </p>
-                </div>
-
-                <!-- Videografer -->
-                <div class="slide-item" data-divisi="videografer">
-                    <img src="videografer.JPG" alt="Divisi Videografer REDIGTAR" class="w-28 h-28 rounded-full mb-4 object-cover mx-auto">
-                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Videografer</h3>
-                    <p class="text-md text-gray-600 max-w-2xl mx-auto">
-                        Merekam cerita dalam gerak, mengatur sudut pandang dan teknik sinematografi.
-                    </p>
-                </div>
-
-                <!-- Desain Visual -->
-                <div class="slide-item" data-divisi="desain-visual">
-                    <img src="desainer.JPG" alt="Divisi Desain Visual REDIGTAR" class="w-28 h-28 rounded-full mb-4 object-cover mx-auto">
-                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Desain Visual</h3>
-                    <p class="text-md text-gray-600 max-w-2xl mx-auto">
-                        Menciptakan identitas visual REDIGTAR dengan desain grafis yang menarik.
-                    </p>
-                </div>
-
-                <!-- Pilot Drone -->
-                <div class="slide-item" data-divisi="drone">
-                    <img src="drone.JPG" alt="Divisi Pilot Drone REDIGTAR" class="w-28 h-28 rounded-full mb-4 object-cover mx-auto">
-                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Pilot Drone</h3>
-                    <p class="text-md text-gray-600 max-w-2xl mx-auto">
-                        Merekam dari udara dengan perspektif unik dan memukau.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Tombol Navigasi -->
-            <div class="flex justify-center gap-4 mt-8">
-                <button onclick="prevSlide()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                    &larr;
-                </button>
-                <button onclick="nextSlide()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                    &rarr;
-                </button>
-            </div>
+        <!-- Fotografer -->
+        <div class="slide-item" data-divisi="fotografer">
+          <img src="fotografer.JPG" alt="Divisi Fotografer REDIGTAR" class="w-28 h-28 rounded-full mb-4 object-cover mx-auto">
+          <h3 class="text-2xl font-bold text-blue-600 mb-2">Fotografer</h3>
+          <p class="text-md text-gray-600 max-w-2xl mx-auto">
+            Mengabadikan momen berharga dalam bingkai foto dengan teknik fotografi yang kuat.
+          </p>
         </div>
-    </section>
 
-    <!-- Formulir Pendaftaran -->
-    <section id="daftar" class="py-16 px-6 sm:px-12 bg-white">
-        <div class="max-w-xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Pendaftaran Anggota Baru</h2>
-            <div class="bg-slate-100 p-8 rounded-lg shadow-lg">
-                <form action="https://script.google.com/macros/s/AKfycbyUEkhAT7tQciMgZg1f9HY23lCACIexxCChTKAkfZdBK8vXalDFlvwj45A7mr4eG6A2/exec" method="POST">
-                    <input type="text" name="nama" placeholder="Nama Lengkap" required class="w-full px-4 py-2 my-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <input type="text" name="kelas" placeholder="Kelas" required class="w-full px-4 py-2 my-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <input type="text" name="whatsapp" placeholder="Nomor WhatsApp" required class="w-full px-4 py-2 my-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <textarea name="alasan" rows="3" placeholder="Alasan bergabung" required class="w-full px-4 py-2 my-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                    <select name="divisi" required class="w-full px-4 py-2 my-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="">-- Pilih Divisi --</option>
-                        <option>Editor</option>
-                        <option>Fotografer</option>
-                        <option>Videografer</option>
-                        <option>Desain Visual</option>
-                        <option>Pilot Drone</option>
-                        <option>Konten Kreator</option>
-                        <option>Jurnalis</option>
-                    </select>
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md mt-4">
-                        Kirim Formulir Pendaftaran
-                    </button>
-                </form>
-            </div>
+        <!-- Videografer -->
+        <div class="slide-item" data-divisi="videografer">
+          <img src="videografer.JPG" alt="Divisi Videografer REDIGTAR" class="w-28 h-28 rounded-full mb-4 object-cover mx-auto">
+          <h3 class="text-2xl font-bold text-blue-600 mb-2">Videografer</h3>
+          <p class="text-md text-gray-600 max-w-2xl mx-auto">
+            Merekam cerita dalam gerak, mengatur sudut pandang dan teknik sinematografi.
+          </p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-8 px-6 sm:px-12">
-        <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-xl font-bold text-white mb-2">REDIGTAR</h3>
-            <p class="text-sm">Dokumentasi Digital untuk Ketarunaan</p>
-            <div class="mt-4 flex justify-center space-x-4">
-                <a href="#" class="hover:text-blue-500">Instagram</a>
-            </div>
-            <div class="mt-6 text-sm text-gray-500">
-                &copy; 2025 REDIGTAR. All Rights Reserved.
-            </div>
+        <!-- Desain Visual -->
+        <div class="slide-item" data-divisi="desain-visual">
+          <img src="desainer.JPG" alt="Divisi Desain Visual REDIGTAR" class="w-28 h-28 rounded-full mb-4 object-cover mx-auto">
+          <h3 class="text-2xl font-bold text-blue-600 mb-2">Desain Visual</h3>
+          <p class="text-md text-gray-600 max-w-2xl mx-auto">
+            Menciptakan identitas visual REDIGTAR dengan desain grafis yang menarik.
+          </p>
         </div>
-    </footer>
 
-    <!-- Script -->
-    <script>
-        let currentDivisi = 0;
-        const divisiItems = document.querySelectorAll('.slide-item');
-        const totalDivisi = divisiItems.length;
+        <!-- Pilot Drone -->
+        <div class="slide-item" data-divisi="drone">
+          <img src="drone.JPG" alt="Divisi Pilot Drone REDIGTAR" class="w-28 h-28 rounded-full mb-4 object-cover mx-auto">
+          <h3 class="text-2xl font-bold text-blue-600 mb-2">Pilot Drone</h3>
+          <p class="text-md text-gray-600 max-w-2xl mx-auto">
+            Merekam dari udara dengan perspektif unik dan memukau.
+          </p>
+        </div>
+      </div>
 
-        function showDivisi(index) {
-            divisiItems.forEach(item => item.classList.remove('active'));
-            divisiItems[index].classList.add('active');
-        }
+      <!-- Tombol Navigasi -->
+      <div class="flex justify-center gap-4 mt-8">
+        <button onclick="prevSlide()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          &larr;
+        </button>
+        <button onclick="nextSlide()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          &rarr;
+        </button>
+      </div>
+    </div>
+  </section>
 
-        function nextSlide() {
-            currentDivisi = (currentDivisi + 1) % totalDivisi;
-            showDivisi(currentDivisi);
-        }
+  <!-- Formulir Pendaftaran -->
+  <section id="daftar" class="py-16 px-6 sm:px-12 bg-white">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Pendaftaran Anggota Baru</h2>
+      <div class="bg-slate-100 p-8 rounded-lg shadow-lg">
+        <form action="https://script.google.com/macros/s/AKfycbyUEkhAT7tQciMgZg1f9HY23lCACIexxCChTKAkfZdBK8vXalDFlvwj45A7mr4eG6A2/exec" method="POST">
+          <input type="text" name="nama" placeholder="Nama Lengkap" required class="w-full px-4 py-2 my-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input type="text" name="kelas" placeholder="Kelas" required class="w-full px-4 py-2 my-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input type="text" name="whatsapp" placeholder="Nomor WhatsApp" required class="w-full px-4 py-2 my-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <textarea name="alasan" rows="3" placeholder="Alasan bergabung" required class="w-full px-4 py-2 my-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          <select name="divisi" required class="w-full px-4 py-2 my-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">-- Pilih Divisi --</option>
+            <option>Editor</option>
+            <option>Fotografer</option>
+            <option>Videografer</option>
+            <option>Desain Visual</option>
+            <option>Pilot Drone</option>
+            <option>Konten Kreator</option>
+            <option>Jurnalis</option>
+          </select>
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md mt-4">
+            Kirim Formulir Pendaftaran
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-        function prevSlide() {
-            currentDivisi = (currentDivisi - 1 + totalDivisi) % totalDivisi;
-            showDivisi(currentDivisi);
-        }
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-8 px-6 sm:px-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-xl font-bold text-white mb-2">REDIGTAR</h3>
+      <p class="text-sm">Dokumentasi Digital untuk Ketarunaan</p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="#" class="hover:text-blue-500">Instagram</a>
+      </div>
+      <div class="mt-6 text-sm text-gray-500">
+        &copy; 2025 REDIGTAR. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
 
-        // Auto-slide tiap 6 detik
-        setInterval(nextSlide, 6000);
+  <!-- Script -->
+  <script>
+    let currentDivisi = 0;
+    const divisiItems = document.querySelectorAll('.slide-item');
+    const totalDivisi = divisiItems.length;
 
-        <script>
-// --- Notifikasi sukses / duplikat ---
-window.onload = function() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const status = urlParams.get('status');
+    function showDivisi(index) {
+      divisiItems.forEach(item => item.classList.remove('active'));
+      divisiItems[index].classList.add('active');
+    }
 
-  if (status === 'success') {
-    alert("✅ Pendaftaran berhasil! Terima kasih sudah bergabung.");
-  } else if (status === 'duplicate') {
-    alert("⚠️ Anda sudah terdaftar sebelumnya, tidak perlu mendaftar ulang.");
-  }
-};
-</script>
+    function nextSlide() {
+      currentDivisi = (currentDivisi + 1) % totalDivisi;
+      showDivisi(currentDivisi);
+    }
+
+    function prevSlide() {
+      currentDivisi = (currentDivisi - 1 + totalDivisi) % totalDivisi;
+      showDivisi(currentDivisi);
+    }
+
+    // Auto-slide tiap 6 detik
+    setInterval(nextSlide, 6000);
+
+    // --- Notifikasi sukses / duplikat ---
+    window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const status = urlParams.get('status');
+
+      if (status === 'success') {
+        alert("✅ Pendaftaran berhasil! Terima kasih sudah bergabung.");
+      } else if (status === 'duplicate') {
+        alert("⚠️ Anda sudah terdaftar sebelumnya, tidak perlu mendaftar ulang.");
+      }
+    };
+  </script>
 </body>
 </html>
