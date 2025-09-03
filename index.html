@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REDIGTAR - Record Digital Taruna</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDIGTAR - Record Digital Taruna</title>
+
+        <meta name="google-site-verification" content="_jVgeWmbXYml5snJJqJCIi2NSy4ypYK03bAiFvNcPXA" />
 
     <!-- SEO -->
     <meta name="description" content="Website resmi REDIGTAR (Record Digital Taruna) SMK Negeri 1 Puring. Dokumentasi kreatif kegiatan ketarunaan.">
@@ -128,7 +130,7 @@
 
                 <!-- Desain Visual -->
                 <div class="slide-item" data-divisi="desain-visual">
-                    <img src="desainer.jpg" alt="Divisi Desain Visual REDIGTAR" class="w-28 h-28 rounded-full mb-4 object-cover mx-auto">
+                    <img src="desainer.JPG" alt="Divisi Desain Visual REDIGTAR" class="w-28 h-28 rounded-full mb-4 object-cover mx-auto">
                     <h3 class="text-2xl font-bold text-blue-600 mb-2">Desain Visual</h3>
                     <p class="text-md text-gray-600 max-w-2xl mx-auto">
                         Menciptakan identitas visual REDIGTAR dengan desain grafis yang menarik.
@@ -223,17 +225,18 @@
         // Auto-slide tiap 6 detik
         setInterval(nextSlide, 6000);
 
-        // Pesan sukses
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('status') === 'success') {
-                const successMessage = document.createElement('div');
-                successMessage.innerHTML = '✅ <strong>Pendaftaran berhasil!</strong> Terima kasih telah mendaftar.';
-                successMessage.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-md fixed top-20 left-1/2 -translate-x-1/2 z-50';
-                document.body.prepend(successMessage);
-                setTimeout(() => successMessage.remove(), 6000);
-            }
-        };
-    </script>
+        <script>
+// --- Notifikasi sukses / duplikat ---
+window.onload = function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const status = urlParams.get('status');
+
+  if (status === 'success') {
+    alert("✅ Pendaftaran berhasil! Terima kasih sudah bergabung.");
+  } else if (status === 'duplicate') {
+    alert("⚠️ Anda sudah terdaftar sebelumnya, tidak perlu mendaftar ulang.");
+  }
+};
+</script>
 </body>
 </html>
